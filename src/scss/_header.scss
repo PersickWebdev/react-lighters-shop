@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  .header__logoBox {
+    .header__logo {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .header__name {
+    font-size: 30px;
+    font-weight: 900;
+    color: $dark-background-02;
+  }
+
+  .header__rightBox {
+    .cart {
+      background-color: $button;
+
+      .cart__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        .cart__icon {
+          width: 50px;
+          height: 50px;
+          border-right: 1px solid $dark-background-02;
+        }
+
+        .cart__data {
+          margin: 0 auto;
+          text-align: center;
+          color: $dark-background-02;
+        }
+      }
+    }
+  }
+}

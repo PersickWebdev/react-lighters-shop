@@ -1,0 +1,70 @@
+{
+  "lighters": [
+    {
+      "id": 1,
+      "url": "path",
+      "model": "Zippo Classic Street Chrome",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 10
+    },
+    {
+      "id": 2,
+      "url": "path",
+      "model": "Zippo Classic Street Chrome",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 15
+    },
+    {
+      "id": 3,
+      "url": "path",
+      "model": "Zippo Classic Street Chrome",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 20
+    },
+    {
+      "id": 4,
+      "url": "path",
+      "model": "Zippo Classic Street Chrome",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 25
+    },
+    {
+      "id": 5,
+      "url": "path",
+      "model": "Zippo Classic Street Chrome",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 30
+    },
+    {
+      "id": 6,
+      "url": "path",
+      "model": "Zippo Classic Street Chrome",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 35
+    }
+  ]
+}

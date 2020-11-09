@@ -1,0 +1,18 @@
+@import 'reset';
+@import 'colors';
+@import './header';
+@import './button';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background-color: $dark-background-01;
+}
+
+.application {
+  max-width: 1024px;
+  margin: 0 auto;
+}
