@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <header className='header'>
             <div className='header__logoBox'>
-                <img className='header__logo' src={logo} alt=""/>
+                <img className='header__logo' src={logo} alt='logo-picture'/>
             </div>
             <h1 className='header__name'>
                 Exclusive Lighters
@@ -19,7 +19,7 @@ const Header = () => {
                     Dark Theme
                 </button>
                 <div className='cart'>
-                    <NavLink className='cart__link button' to='/cart'>
+                    <NavLink className='cart__link button' to='/cart' activeClassName='button--active'>
                         <div className='cart__iconBox'>
                             <img className='cart__icon' src={cartIcon} alt="cartIcon"/>
                         </div>

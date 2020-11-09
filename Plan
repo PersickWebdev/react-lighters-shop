@@ -1,0 +1,16 @@
+PREPARATION:
+    1. Install all basic libraries.
+    2. Set up sass.
+    3. Prepare assets.
+STAGES:
+    1. Header:
+        - Header layout;
+        - Header styles;
+    2. Nav:
+        - Nav layout;
+        - Nav styles;
+        - Nav links and paths;
+    3. Set up Routes.
+    4. Home:
+        - Home layout;
+        - Home styles;

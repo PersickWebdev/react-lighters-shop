@@ -1,13 +1,19 @@
 .button {
-  padding: 3px;
+  padding: 5px 5px;
   border: 1px solid $dark-background-02;
   border-radius: 3px;
   outline: none;
+  color: $dark-background-02;
   background-color: $button;
   transition: all 0.3s ease;
+  text-decoration: none;
 
   &:hover {
     color: $button;
     background-color: $button-hover;
   }
+}
+
+.button--active {
+  background-color: $button-active;
 }

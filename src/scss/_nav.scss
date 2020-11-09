@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: $dark-background-02;
+
+  .nav__link {
+    outline: none;
+  }
+
+  .nav__link:not(:last-child) {
+    margin-right: 20px;
+  }
+}
