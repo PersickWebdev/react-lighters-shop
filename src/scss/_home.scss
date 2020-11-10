@@ -1,0 +1,25 @@
+.home {
+  margin: 15px;
+  padding: 10px;
+  color: $dark-background-01;
+  background-color: $dark-background-02;
+
+  .home__title {
+    font-weight: 900;
+    font-size: 25px;
+  }
+
+  .home__paragraph {
+    margin-top: 10px;
+    text-align: justify;
+  }
+
+  .home__imagesBox {
+    text-align: center;
+
+    .home__image {
+      width: 200px;
+      height: 200px;
+    }
+  }
+}

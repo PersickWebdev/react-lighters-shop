@@ -8,6 +8,7 @@ import { Store } from './components';
 import { About } from './components';
 import { Contacts } from './components';
 import { Cart } from './components';
+import { Footer } from './components';
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
               <Route path='/contacts'   component={ Contacts } exact/>
               <Route path='/cart'       component={ Cart } exact/>
           </div>
+          <Footer/>
       </div>
   );
 }

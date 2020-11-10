@@ -1,0 +1,35 @@
+.footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 20px solid $dark-background-02;
+  background-color: $dark-background-01;
+
+  .footer__linkBoxSide {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer__linkBox {
+      display: flex;
+      flex-direction: column;
+
+      .footer__link {
+        padding-top: 5px;
+        text-decoration: none;
+        outline: none;
+        color: $dark-background-02;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .footer__linkBox:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
