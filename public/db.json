@@ -2,7 +2,7 @@
   "lighters": [
     {
       "id": 1,
-      "url": "path",
+      "url": "./img/zippo-01.png",
       "model": "Zippo Classic Street Chrome",
       "country": "USA",
       "color": "silver",
@@ -13,8 +13,8 @@
     },
     {
       "id": 2,
-      "url": "path",
-      "model": "Zippo Classic Street Chrome",
+      "url": "./img/zippo-02.png",
+      "model": "Zippo Classic Street Grey",
       "country": "USA",
       "color": "silver",
       "fuel": "petrol",
@@ -24,8 +24,8 @@
     },
     {
       "id": 3,
-      "url": "path",
-      "model": "Zippo Classic Street Chrome",
+      "url": "./img/zippo-03.png",
+      "model": "Zippo Classic Street Black",
       "country": "USA",
       "color": "silver",
       "fuel": "petrol",
@@ -35,8 +35,8 @@
     },
     {
       "id": 4,
-      "url": "path",
-      "model": "Zippo Classic Street Chrome",
+      "url": "./img/zippo-03.png",
+      "model": "Zippo Classic Street Red",
       "country": "USA",
       "color": "silver",
       "fuel": "petrol",
@@ -46,8 +46,8 @@
     },
     {
       "id": 5,
-      "url": "path",
-      "model": "Zippo Classic Street Chrome",
+      "url": "./img/zippo-04.png",
+      "model": "Zippo Classic Street Green",
       "country": "USA",
       "color": "silver",
       "fuel": "petrol",
@@ -57,8 +57,8 @@
     },
     {
       "id": 6,
-      "url": "path",
-      "model": "Zippo Classic Street Chrome",
+      "url": "./img/zippo-05.png",
+      "model": "Zippo Classic Street Yellow",
       "country": "USA",
       "color": "silver",
       "fuel": "petrol",

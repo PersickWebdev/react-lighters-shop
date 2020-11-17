@@ -6,17 +6,17 @@ import itemPicture03 from '../../assets/images/zippo-02.png';
 const Home = () => {
     return (
         <main className='home'>
-            <h2 className='home__title'>
+            <h2 className='title'>
                 Welcome to our store!
             </h2>
-            <p className='home__paragraph'>
+            <p className='paragraph'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id rutrum metus.
                 Ut hendrerit neque aliquam, rutrum quam eu, consectetur nulla. Sed sed egestas odio.
                 Maecenas elementum lobortis massa. Aliquam erat volutpat.
                 Suspendisse congue turpis dolor. Vivamus ultricies finibus ante at tempus.
                 Sed aliquet eget arcu non suscipit.
             </p>
-            <p className='home__paragraph'>
+            <p className='paragraph'>
                 Donec aliquet nunc id eros laoreet, convallis laoreet mi tempus.
                 Suspendisse scelerisque metus at sem sollicitudin, at elementum sem malesuada.
                 In venenatis enim a turpis posuere dapibus. Aenean rhoncus et turpis quis consectetur.
@@ -25,7 +25,7 @@ const Home = () => {
                 Mauris suscipit tellus arcu, vitae pellentesque ante placerat ac.
                 Nulla ac tristique risus. Aliquam sit amet lectus lacus.
             </p>
-            <p className='home__paragraph'>
+            <p className='paragraph'>
                 Quisque sollicitudin diam at ante vehicula, ut gravida lacus accumsan.
                 Praesent faucibus velit id interdum convallis. Maecenas purus tellus, congue vel erat nec, gravida laoreet enim.
                 Curabitur quis iaculis justo, quis mollis ligula. Sed laoreet sollicitudin felis lacinia varius.
@@ -41,10 +41,10 @@ const Home = () => {
                 <img className='home__image' src={itemPicture02} alt='picture-02'/>
                 <img className='home__image' src={itemPicture03} alt='picture-03'/>
             </div>
-            <h2 className='home__title'>
+            <h2 className='title'>
                 Some Information
             </h2>
-            <p className='home__paragraph'>
+            <p className='paragraph'>
                 Donec aliquet nunc id eros laoreet, convallis laoreet mi tempus.
                 Suspendisse scelerisque metus at sem sollicitudin, at elementum sem malesuada.
                 In venenatis enim a turpis posuere dapibus. Aenean rhoncus et turpis quis consectetur.

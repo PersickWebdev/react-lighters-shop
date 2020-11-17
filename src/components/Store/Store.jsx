@@ -1,10 +1,14 @@
 import React from 'react';
 
+import { Sidebar } from '../../components';
+import { LightersList } from '../../components';
+
 const Store = () => {
     return (
-        <div className='store'>
-            Store
-        </div>
+        <main className='store'>
+            <Sidebar/>
+            <LightersList/>
+        </main>
     );
 };
 

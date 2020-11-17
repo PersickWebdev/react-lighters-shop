@@ -1,0 +1,85 @@
+.store {
+  display: flex;
+
+  .sidebar {
+    flex: 1;
+    border-right: 1px solid $dark-background-02;
+    color: $dark-background-02;
+
+    .sidebar__brandItem {
+      padding: 15px;
+      background-color: $button;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: $button;
+        background-color: $button-hover;
+      }
+    }
+
+    .sidebar__brandItem:not(:last-child) {
+      border-bottom: 1px solid $dark-background-02;
+    }
+  }
+
+  .lightersList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    flex: 5;
+  }
+
+  .lighter {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: $dark-background-02;
+    color: $dark-background-01;
+
+    .lighter__title {
+      padding: 10px 5px;
+      text-align: center;
+      border-bottom: 1px solid $dark-background-01;
+    }
+
+    .lighter__imageBox {
+      text-align: center;
+      border-bottom: 1px solid $dark-background-01;
+
+      .lighter__image {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    .lighter__descriptionBox {
+      width: 100%;
+      padding: 10px;
+      border-bottom: 1px solid $dark-background-01;
+
+      .lighter__option {
+        margin-top: 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .lighter__bottomBox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+
+      .lighter__price {
+        font-size: 20px;
+        font-weight: 600;
+      }
+    }
+
+  }
+
+}
