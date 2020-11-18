@@ -1,6 +1,18 @@
 import React from 'react';
 
-const Lighter = ({ id, url, model, country, color, fuel, ignition, material, price }) => {
+const Lighter = ({
+        id,
+        url,
+        model,
+        brand,
+        country,
+        color,
+        fuel,
+        ignition,
+        material,
+        price
+    }) => {
+
     return (
         <div className='lighter'>
             <h3 className='lighter__title'>

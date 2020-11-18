@@ -1,7 +1,9 @@
-import {SET_ITEMS} from "./actionTypes";
+import {FILTER_ITEMS, SET_ITEMS, SHOW_ALL_ITEMS} from "./actionTypes";
 
 const initialState = {
-    lighters: []
+    lighters: [],
+    filteredLighters: [],
+    isFiltered: false
 }
 
 const storeReducer = (state = initialState, action) => {
@@ -11,6 +13,17 @@ const storeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 lighters: action.payload
+            }
+        case FILTER_ITEMS :
+            return {
+                ...state,
+                filteredLighters: state.lighters.filter(item => item.brand === action.payload),
+                isFiltered: true
+            }
+        case SHOW_ALL_ITEMS :
+            return {
+                ...state,
+                isFiltered: false
             }
         default:
             return state;

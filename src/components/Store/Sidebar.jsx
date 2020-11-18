@@ -1,20 +1,36 @@
 import React from 'react';
+import {filterItems, showAllItems} from "../../redux/actionCreators";
+import {useDispatch} from "react-redux";
 
 const Sidebar = () => {
+    const dispatch = useDispatch();
+
     const brands = [
+        'All items',
         'Zippo',
-        'S.T. Dupond',
+        'S.T. Dupont',
         'BIC',
         'Clipper'
     ]
 
+    const filterOnClick = (item) => {
+        if (item === 'All items') {
+            dispatch(showAllItems());
+        } else {
+            dispatch(filterItems(item));
+        }
+    }
+
     return (
         <aside className='sidebar'>
             <ul className='sidebar__brandsList'>
-                <li className='sidebar__brandItem'>
-                    All Items
-                </li>
-                {brands.map((item, index) => <li className='sidebar__brandItem' key={`${item}_${index}`}>{item}</li>)}
+                {brands.map((item, index) => {
+                    return (
+                        <li className='sidebar__brandItem'
+                            key={`${item}_${index}`}
+                            onClick={() => filterOnClick(item)}>{item}</li>)}
+                    )
+                }
             </ul>
         </aside>
     );
