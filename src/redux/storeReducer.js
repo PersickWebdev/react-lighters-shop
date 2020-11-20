@@ -43,7 +43,8 @@ const storeReducer = (state = initialState, action) => {
             };
             return {
                 ...state,
-                cartItems: newItems
+                cartItems: newItems,
+                totalCount: [].concat.apply([],Object.values(newItems)).length
             }
         case REMOVE_ITEM_FROM_CART :
             const items = {}
@@ -52,10 +53,10 @@ const storeReducer = (state = initialState, action) => {
                     items[key] = state.cartItems[key]
                 }
             }
-            console.log(items)
             return {
                 ...state,
-                cartItems: items
+                cartItems: items,
+                totalCount: [].concat.apply([],Object.values(items)).length
             }
         default:
             return state;
