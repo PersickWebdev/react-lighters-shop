@@ -5,6 +5,7 @@ import {
     ADD_ITEM_TO_CART,
     REMOVE_ITEM_FROM_CART,
 } from "./actionTypes";
+import { calculateTotalPrice } from '../utils/utilFunctions';
 
 const initialState = {
     lighters: [],
@@ -41,10 +42,12 @@ const storeReducer = (state = initialState, action) => {
                     ? [action.payload]
                     : [...state.cartItems[action.payload.id], action.payload]
             };
+
             return {
                 ...state,
                 cartItems: newItems,
-                totalCount: [].concat.apply([],Object.values(newItems)).length
+                totalCount: [].concat.apply([],Object.values(newItems)).length,
+                totalPrice: calculateTotalPrice(newItems)
             }
         case REMOVE_ITEM_FROM_CART :
             const items = {}
@@ -53,10 +56,12 @@ const storeReducer = (state = initialState, action) => {
                     items[key] = state.cartItems[key]
                 }
             }
+
             return {
                 ...state,
                 cartItems: items,
-                totalCount: [].concat.apply([],Object.values(items)).length
+                totalCount: [].concat.apply([],Object.values(items)).length,
+                totalPrice: calculateTotalPrice(items)
             }
         default:
             return state;
