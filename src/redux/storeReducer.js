@@ -5,6 +5,7 @@ import {
     ADD_ITEM_TO_CART,
     REMOVE_ITEM_FROM_CART,
 } from "./actionTypes";
+import { calculateTotalAmount } from '../utils/utilFunctions';
 import { calculateTotalPrice } from '../utils/utilFunctions';
 
 const initialState = {
@@ -46,7 +47,7 @@ const storeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 cartItems: newItems,
-                totalCount: [].concat.apply([],Object.values(newItems)).length,
+                totalCount: calculateTotalAmount(newItems),
                 totalPrice: calculateTotalPrice(newItems)
             }
         case REMOVE_ITEM_FROM_CART :
@@ -60,7 +61,7 @@ const storeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 cartItems: items,
-                totalCount: [].concat.apply([],Object.values(items)).length,
+                totalCount: calculateTotalAmount(items),
                 totalPrice: calculateTotalPrice(items)
             }
         default:
