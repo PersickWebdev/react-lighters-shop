@@ -4,8 +4,11 @@ import logo from '../../assets/images/logo.png';
 import cartIcon from '../../assets/images/cart.png';
 
 import { NavLink } from 'react-router-dom';
+import {useSelector} from "react-redux";
 
 const Header = () => {
+    const { totalCount, totalPrice } = useSelector((state) => state.lighters);
+
     return (
         <header className='header'>
             <div className='header__logoBox'>
@@ -24,8 +27,8 @@ const Header = () => {
                             <img className='cart__icon' src={cartIcon} alt="cartIcon"/>
                         </div>
                         <div className='cart__data'>
-                            <p className='cart__quantity'>5</p>
-                            <p className='cart__amount'>500$</p>
+                            <p className='cart__quantity'>{totalCount}</p>
+                            <p className='cart__amount'>$ {totalPrice}</p>
                         </div>
                     </NavLink>
                 </div>

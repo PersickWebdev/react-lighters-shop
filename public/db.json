@@ -131,6 +131,66 @@
       "ignition": "silicon",
       "material": "brass",
       "price": 55
+    },
+    {
+      "id": 12,
+      "url": "./img/bic-01.png",
+      "brand": "BIC",
+      "model": "BIC Model 01",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 2
+    },
+    {
+      "id": 13,
+      "url": "./img/bic-01.png",
+      "brand": "BIC",
+      "model": "BIC Model 02",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 4
+    },
+    {
+      "id": 14,
+      "url": "./img/bic-01.png",
+      "brand": "BIC",
+      "model": "BIC Model 03",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 5
+    },
+    {
+      "id": 15,
+      "url": "./img/clipper-01.png",
+      "brand": "Clipper",
+      "model": "Clipper Model 01",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 7
+    },
+    {
+      "id": 16,
+      "url": "./img/clipper-01.png",
+      "brand": "Clipper",
+      "model": "Clipper Model 02",
+      "country": "USA",
+      "color": "silver",
+      "fuel": "petrol",
+      "ignition": "silicon",
+      "material": "brass",
+      "price": 8
     }
   ]
 }

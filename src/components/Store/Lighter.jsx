@@ -10,8 +10,19 @@ const Lighter = ({
         fuel,
         ignition,
         material,
-        price
+        price,
+        addToCartHandler
     }) => {
+
+    const handleAddItem = () => {
+        const item = {
+            id,
+            url,
+            model,
+            price
+        }
+        addToCartHandler(item)
+    }
 
     return (
         <div className='lighter'>
@@ -45,7 +56,7 @@ const Lighter = ({
                 <p className='lighter__price'>
                     <span>$ {price}</span>
                 </p>
-                <button className='button'>
+                <button className='button' onClick={handleAddItem}>
                     Add to Cart
                 </button>
             </div>

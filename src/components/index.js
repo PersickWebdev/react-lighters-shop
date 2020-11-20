@@ -8,4 +8,5 @@ export { default as Lighter } from './Store/Lighter';
 export { default as About } from './About/About';
 export { default as Contacts } from './Contacts/Contacts';
 export { default as Cart } from './Cart/Cart';
+export { default as CartItem } from './Cart/CartItem';
 export { default as Footer } from './Footer/Footer';

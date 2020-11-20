@@ -17,3 +17,16 @@
 .button--active {
   background-color: $button-active;
 }
+
+.button--delete {
+  background-color: $button-delete;
+}
+
+.button--cart {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  text-align: center;
+}

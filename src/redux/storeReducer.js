@@ -1,9 +1,18 @@
-import {FILTER_ITEMS, SET_ITEMS, SHOW_ALL_ITEMS} from "./actionTypes";
+import {
+    SET_ITEMS,
+    SHOW_ALL_ITEMS,
+    FILTER_ITEMS,
+    ADD_ITEM_TO_CART,
+    REMOVE_ITEM_FROM_CART,
+} from "./actionTypes";
 
 const initialState = {
     lighters: [],
     filteredLighters: [],
-    isFiltered: false
+    cartItems: {},
+    isFiltered: false,
+    totalCount: 0,
+    totalPrice: 0
 }
 
 const storeReducer = (state = initialState, action) => {
@@ -24,6 +33,29 @@ const storeReducer = (state = initialState, action) => {
             return {
                 ...state,
                 isFiltered: false
+            }
+        case ADD_ITEM_TO_CART :
+            const newItems = {
+                ...state.cartItems,
+                [action.payload.id]: !state.cartItems[action.payload.id]
+                    ? [action.payload]
+                    : [...state.cartItems[action.payload.id], action.payload]
+            };
+            return {
+                ...state,
+                cartItems: newItems
+            }
+        case REMOVE_ITEM_FROM_CART :
+            const items = {}
+            for (let key in state.cartItems) {
+                if (Number(key) !== action.payload) {
+                    items[key] = state.cartItems[key]
+                }
+            }
+            console.log(items)
+            return {
+                ...state,
+                cartItems: items
             }
         default:
             return state;
