@@ -26,7 +26,10 @@ const Cart = () => {
     return (
         <div className='cart__container'>
             {cartElements.length
-                ? cartElements.map(item => <CartItem key={item.id} {...item} removeFromCartHandler={removeFromCartHandler}/>)
+                ? cartElements.map(item => <CartItem key={item.id}
+                                                     {...item}
+                                                     cartItems={cartItems}
+                                                     removeFromCartHandler={removeFromCartHandler}/>)
                 : <span className='cart__message'>No items ...</span>}
         </div>
     );

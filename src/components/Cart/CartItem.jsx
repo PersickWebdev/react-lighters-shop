@@ -5,7 +5,8 @@ const CartItem = ({
     url,
     model,
     price,
-    removeFromCartHandler
+    removeFromCartHandler,
+    cartItems
                   }) => {
     return (
         <div className='cartItem'>
@@ -20,14 +21,14 @@ const CartItem = ({
                     &#45;
                 </button>
                 <p className='cartItem__quantity'>
-                    2
+                    {cartItems[id].length}
                 </p>
                 <button className='button button--cart'>
                     &#43;
                 </button>
             </div>
             <p className='cartItem__price'>
-                $ {price}
+                $ {cartItems[id].reduce((sum, item) => sum + item.price, 0)}
             </p>
             <div className='cartItem__buttonBox'>
                 <button className='button button--delete button--cart'
