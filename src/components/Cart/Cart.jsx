@@ -2,7 +2,7 @@ import React from 'react';
 
 import { CartItem } from '../../components';
 import {useDispatch, useSelector} from 'react-redux';
-import {removeItemFromCart} from "../../redux/actionCreators";
+import {decreaseByOne, increaseByOne, removeItemFromCart} from "../../redux/actionCreators";
 
 const Cart = () => {
     const dispatch = useDispatch();
@@ -23,12 +23,22 @@ const Cart = () => {
         })
     }
 
+    const decreaseByOneHandler = (id) => {
+        dispatch(decreaseByOne(id));
+    }
+
+    const increaseByOneHandler = (id) => {
+        dispatch(increaseByOne(id));
+    }
+
     return (
         <div className='cart__container'>
             {cartElements.length
                 ? cartElements.map(item => <CartItem key={item.id}
                                                      {...item}
                                                      cartItems={cartItems}
+                                                     decreaseByOneHandler={decreaseByOneHandler}
+                                                     increaseByOneHandler={increaseByOneHandler}
                                                      removeFromCartHandler={removeFromCartHandler}/>)
                 : <span className='cart__message'>No items ...</span>}
         </div>

@@ -6,8 +6,11 @@ const CartItem = ({
     model,
     price,
     removeFromCartHandler,
+    decreaseByOneHandler,
+    increaseByOneHandler,
     cartItems
                   }) => {
+
     return (
         <div className='cartItem'>
             <div className='cartItem__imageBox'>
@@ -17,13 +20,13 @@ const CartItem = ({
                 {model}
             </p>
             <div className='cartItem__quantityBox'>
-                <button className='button button--cart'>
+                <button className='button button--cart' onClick={() => decreaseByOneHandler(id)}>
                     &#45;
                 </button>
                 <p className='cartItem__quantity'>
                     {cartItems[id].length}
                 </p>
-                <button className='button button--cart'>
+                <button className='button button--cart' onClick={() => increaseByOneHandler(id)}>
                     &#43;
                 </button>
             </div>

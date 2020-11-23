@@ -3,7 +3,7 @@ import {
     SHOW_ALL_ITEMS,
     FILTER_ITEMS,
     ADD_ITEM_TO_CART,
-    REMOVE_ITEM_FROM_CART,
+    REMOVE_ITEM_FROM_CART, DECREASE_BY_ONE, INCREASE_BY_ONE,
 } from "./actionTypes";
 import { calculateTotalAmount } from '../utils/utilFunctions';
 import { calculateTotalPrice } from '../utils/utilFunctions';
@@ -63,6 +63,38 @@ const storeReducer = (state = initialState, action) => {
                 cartItems: items,
                 totalCount: calculateTotalAmount(items),
                 totalPrice: calculateTotalPrice(items)
+            }
+        case DECREASE_BY_ONE :
+            const itemsObject = {
+                ...state.cartItems
+            }
+            for (let array in itemsObject) {
+                if (Number(array) === action.payload) {
+                    if (itemsObject[array].length > 1) {
+                        itemsObject[array].pop();
+                    }
+                }
+            }
+            return {
+                ...state,
+                cartItems: itemsObject,
+                totalCount: calculateTotalAmount(itemsObject),
+                totalPrice: calculateTotalPrice(itemsObject)
+            }
+        case INCREASE_BY_ONE :
+            const newItemsObject = {
+                ...state.cartItems
+            }
+            for (let array in newItemsObject) {
+                if (Number(array) === action.payload) {
+                    newItemsObject[array].push(newItemsObject[array][0]);
+                }
+            }
+            return {
+                ...state,
+                cartItems: newItemsObject,
+                totalCount: calculateTotalAmount(newItemsObject),
+                totalPrice: calculateTotalPrice(newItemsObject)
             }
         default:
             return state;

@@ -4,7 +4,9 @@ import {
     SHOW_ALL_ITEMS,
     FILTER_ITEMS,
     ADD_ITEM_TO_CART,
-    REMOVE_ITEM_FROM_CART
+    REMOVE_ITEM_FROM_CART,
+    DECREASE_BY_ONE,
+    INCREASE_BY_ONE
 } from "./actionTypes";
 
 // Store:
@@ -44,6 +46,20 @@ export const addItemToCart = (itemObject) => {
 export const removeItemFromCart = (itemId) => {
     return {
         type: REMOVE_ITEM_FROM_CART,
+        payload: itemId
+    };
+};
+
+export const decreaseByOne = (itemId) => {
+    return {
+        type: DECREASE_BY_ONE,
+        payload: itemId
+    };
+};
+
+export const increaseByOne = (itemId) => {
+    return {
+        type: INCREASE_BY_ONE,
         payload: itemId
     };
 };
