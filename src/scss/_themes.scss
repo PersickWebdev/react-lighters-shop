@@ -1,0 +1,122 @@
+// Application
+.application--light {
+  background-color: $light-background-01;
+
+  .content {
+    background-color: $light-background-01;
+  }
+}
+
+.application--dark {
+  background-color: $dark-background-01;
+
+  .content {
+    background-color: $dark-background-01;
+  }
+}
+
+// Header
+.header--light {
+  background-color: $light-background-02;
+
+  .header__name {
+    color: $dark-background-02;
+  }
+
+  .header__rightBox {
+    .cart {
+      background-color: $button;
+
+      .cart__link {
+        .cart__icon {
+          border-right: 1px solid $dark-background-02;
+        }
+
+        .cart__data {
+          color: $dark-background-02;
+        }
+      }
+    }
+  }
+}
+
+// Home
+.home--light {
+  color: $dark-background-02;
+  background-color: $light-background-02;
+}
+
+//Store
+.store--light {
+  .sidebar {
+    border-right: 1px solid $dark-background-02;
+    color: $dark-background-02;
+
+    .sidebar__brandItem {
+      background-color: $button;
+
+      &:hover {
+        color: $button;
+        background-color: $button-hover;
+      }
+    }
+
+    .sidebar__brandItem:not(:last-child) {
+      border-bottom: 1px solid $dark-background-02;
+    }
+  }
+
+  .lighter {
+    background-color: $light-background-02;
+    color: $dark-background-02;
+  }
+}
+
+// About
+.about--light {
+  color: $dark-background-02;
+  background-color: $light-background-02;
+}
+
+// Contacts
+.contacts--light {
+  color: $dark-background-02;
+  background-color: $light-background-02;
+}
+
+// Footer
+.footer--light {
+  border-top: 20px solid $dark-background-02;
+  background-color: $light-background-02;
+
+  .footer__linkBoxSide {
+    .footer__linkBox {
+      .footer__link {
+        color: $dark-background-02;
+        transition: all 0.3s ease;
+
+        &:hover {
+          color: $button-hover;
+        }
+      }
+    }
+  }
+}
+
+// Cart
+.cart__container--light {
+  background-color: $light-background-02;
+}
+
+.cart__message--light {
+  color: $dark-background-02;
+}
+
+.cartItem--light {
+  background-color: $light-background-02;
+  color: $dark-background-02;
+
+  .cartItem__imageBox {
+    border-right: 1px solid $dark-background-02;
+  }
+}

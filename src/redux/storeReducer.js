@@ -3,7 +3,10 @@ import {
     SHOW_ALL_ITEMS,
     FILTER_ITEMS,
     ADD_ITEM_TO_CART,
-    REMOVE_ITEM_FROM_CART, DECREASE_BY_ONE, INCREASE_BY_ONE,
+    REMOVE_ITEM_FROM_CART,
+    DECREASE_BY_ONE,
+    INCREASE_BY_ONE,
+    TOGGLE_THEME,
 } from "./actionTypes";
 import { calculateTotalAmount } from '../utils/utilFunctions';
 import { calculateTotalPrice } from '../utils/utilFunctions';
@@ -14,7 +17,8 @@ const initialState = {
     cartItems: {},
     isFiltered: false,
     totalCount: 0,
-    totalPrice: 0
+    totalPrice: 0,
+    theme: false
 }
 
 const storeReducer = (state = initialState, action) => {
@@ -95,6 +99,11 @@ const storeReducer = (state = initialState, action) => {
                 cartItems: newItemsObject,
                 totalCount: calculateTotalAmount(newItemsObject),
                 totalPrice: calculateTotalPrice(newItemsObject)
+            }
+        case TOGGLE_THEME :
+            return {
+                ...state,
+                theme: !state.theme
             }
         default:
             return state;

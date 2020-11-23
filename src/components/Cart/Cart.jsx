@@ -1,13 +1,13 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import { CartItem } from '../../components';
-import {useDispatch, useSelector} from 'react-redux';
-import {decreaseByOne, increaseByOne, removeItemFromCart} from "../../redux/actionCreators";
+import { useDispatch, useSelector } from 'react-redux';
+import { decreaseByOne, increaseByOne, removeItemFromCart } from "../../redux/actionCreators";
 
 const Cart = () => {
     const dispatch = useDispatch();
-    const cartItems = useSelector((state) => state.lighters.cartItems);
-    console.log(cartItems);
+    const { cartItems, theme } = useSelector((state) => state.lighters);
 
     const removeFromCartHandler = (itemId) => {
         dispatch(removeItemFromCart(itemId))
@@ -32,7 +32,9 @@ const Cart = () => {
     }
 
     return (
-        <div className='cart__container'>
+        <div className={classNames('cart__container', {
+            'cart__container--light': theme
+        })}>
             {cartElements.length
                 ? cartElements.map(item => <CartItem key={item.id}
                                                      {...item}

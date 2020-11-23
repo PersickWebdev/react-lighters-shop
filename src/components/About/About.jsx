@@ -1,8 +1,14 @@
 import React from 'react';
+import classNames from 'classnames';
+import { useSelector } from "react-redux";
 
 const About = () => {
+    const theme = useSelector((state) => state.lighters.theme);
+
     return (
-        <main className='about'>
+        <main className={classNames('about', {
+            'about--light': theme
+        })}>
             <h2 className='title'>
                 History
             </h2>

@@ -1,11 +1,17 @@
 import React from 'react';
+import classNames from 'classnames';
+import { useSelector } from 'react-redux';
 import itemPicture01 from '../../assets/images/zippo-01.png';
 import itemPicture02 from '../../assets/images/st-dupont-01.png';
 import itemPicture03 from '../../assets/images/zippo-02.png';
 
 const Home = () => {
+    const theme = useSelector((state) => state.lighters.theme);
+
     return (
-        <main className='home'>
+        <main className={classNames('home', {
+            'home--light': theme
+        })}>
             <h2 className='title'>
                 Welcome to our store!
             </h2>

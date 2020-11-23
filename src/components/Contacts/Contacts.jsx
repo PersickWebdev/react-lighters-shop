@@ -1,8 +1,14 @@
 import React from 'react';
+import classNames from 'classnames';
+import {useSelector} from "react-redux";
 
 const Contacts = () => {
+    const theme = useSelector((state) => state.lighters.theme);
+
     return (
-        <main className='contacts'>
+        <main className={classNames('contacts', {
+            'contacts--light': theme
+        })}>
             <h2 className='title'>Our Contacts:</h2>
             <p className='paragraph'>Telephone number: 000 00 00 000</p>
             <p className='paragraph'>Telephone number: 000 00 00 000</p>

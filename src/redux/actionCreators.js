@@ -6,7 +6,7 @@ import {
     ADD_ITEM_TO_CART,
     REMOVE_ITEM_FROM_CART,
     DECREASE_BY_ONE,
-    INCREASE_BY_ONE
+    INCREASE_BY_ONE, TOGGLE_THEME
 } from "./actionTypes";
 
 // Store:
@@ -61,5 +61,12 @@ export const increaseByOne = (itemId) => {
     return {
         type: INCREASE_BY_ONE,
         payload: itemId
+    };
+};
+
+// Theme:
+export const toggleTheme = () => {
+    return {
+        type: TOGGLE_THEME,
     };
 };

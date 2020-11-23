@@ -1,16 +1,26 @@
 import React from 'react';
 
+
 import logo from '../../assets/images/logo.png';
 import cartIcon from '../../assets/images/cart.png';
 
+import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
-import {useSelector} from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
+import { toggleTheme } from '../../redux/actionCreators';
 
 const Header = () => {
-    const { totalCount, totalPrice } = useSelector((state) => state.lighters);
+    const dispatch = useDispatch();
+    const { totalCount, totalPrice, theme } = useSelector((state) => state.lighters);
+
+    const toggleThemeHandler = () => {
+        dispatch(toggleTheme());
+    }
 
     return (
-        <header className='header'>
+        <header className={classNames('header', {
+            'header--light': theme
+        })}>
             <div className='header__logoBox'>
                 <img className='header__logo' src={logo} alt='logo-picture'/>
             </div>
@@ -18,8 +28,8 @@ const Header = () => {
                 Exclusive Lighters
             </h1>
             <div className='header__rightBox'>
-                <button className='button'>
-                    Dark Theme
+                <button className='button' onClick={toggleThemeHandler}>
+                    Switch Theme
                 </button>
                 <div className='cart'>
                     <NavLink className='cart__link button' to='/cart' activeClassName='button--active'>

@@ -1,3 +1,6 @@
+// Theme:
+export const TOGGLE_THEME = 'TOGGLE_THEME';
+
 // Store:
 export const SET_ITEMS = 'SET_ITEMS';
 export const FILTER_ITEMS = 'FILTER_ITEMS';

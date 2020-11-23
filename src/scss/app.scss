@@ -9,6 +9,7 @@
 @import './contacts';
 @import './footer';
 @import './cart';
+@import './themes';
 
 * {
   box-sizing: border-box;
@@ -22,4 +23,9 @@ body {
 .application {
   max-width: 1024px;
   margin: 0 auto;
+  transition: all 0.5s ease;
+
+  .content {
+    transition: all 0.5s ease;
+  }
 }
