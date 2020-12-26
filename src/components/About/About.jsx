@@ -17,7 +17,7 @@ const About = () => {
                 Ut hendrerit neque aliquam, rutrum quam eu, consectetur nulla. Sed sed egestas odio.
                 Maecenas elementum lobortis massa. Aliquam erat volutpat.
                 Suspendisse congue turpis dolor. Vivamus ultricies finibus ante at tempus.
-                Sed aliquet eget arcu non suscipit.
+                Sed aliquet eget arcu non suscipit non.
             </p>
             <p className='paragraph'>
                 Donec aliquet nunc id eros laoreet, convallis laoreet mi tempus.
